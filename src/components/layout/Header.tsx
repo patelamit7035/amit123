@@ -134,6 +134,19 @@ export function Header() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
+              <Link to="/tools/screen-camera">
+                <NavigationMenuLink
+                  className={cn(
+                    "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent/10 hover:text-accent focus:bg-accent/10 focus:text-accent focus:outline-none",
+                    location.pathname === "/tools/screen-camera" && "text-accent"
+                  )}
+                >
+                  Screen &amp; Camera
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
               <Link to="/contact">
                 <NavigationMenuLink
                   className={cn(
@@ -216,6 +229,14 @@ export function Header() {
                 ))}
               </div>
             </div>
+
+            <Link
+              to="/tools/screen-camera"
+              className="block py-2 text-foreground hover:text-accent transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Screen &amp; Camera
+            </Link>
 
             <Link
               to="/contact"

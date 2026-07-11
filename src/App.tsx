@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import WhyUs from "./pages/WhyUs";
 import Contact from "./pages/Contact";
+import ScreenCamera from "./pages/ScreenCamera";
 import AIBootcamp from "./pages/programs/AIBootcamp";
 import Automation from "./pages/programs/Automation";
 import Consulting from "./pages/programs/Consulting";
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/why-us" element={<WhyUs />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/tools/screen-camera" element={<ScreenCamera />} />
           <Route path="/programs/ai-bootcamp" element={<AIBootcamp />} />
           <Route path="/programs/automation" element={<Automation />} />
           <Route path="/programs/consulting" element={<Consulting />} />
