@@ -5,6 +5,32 @@ every day, flags performance issues, and refreshes ad creatives on a fixed
 cadence (every 3 days by default) — generating new copy and creative and
 publishing it automatically or queuing it for your approval.
 
+## View it live (no coding required)
+
+This repo auto-publishes the dashboard as a website on every push to `main`,
+using GitHub's free Pages hosting. One-time setup (a couple of clicks, no
+terminal):
+
+1. On GitHub, open this repo → **Settings** → **Pages** (left sidebar).
+2. Under "Build and deployment", set **Source** to **GitHub Actions**.
+3. Merge the open pull request into `main` (or push to `main` directly).
+
+That's it. A few minutes after the merge, your dashboard will be live at:
+
+```
+https://patelamit7035.github.io/amit123/
+```
+
+You can watch the build progress under the repo's **Actions** tab — a green
+checkmark next to "Deploy dashboard to GitHub Pages" means it's live. Every
+future push to `main` re-publishes automatically, so this URL always reflects
+the latest version. The dashboard needs no setup to use — it seeds realistic
+demo data the first time it loads.
+
+(The `server/` backend described below is separate — it's what you'd deploy
+later if you want the agent to manage your *real* Meta Ads account 24/7. The
+dashboard above is fully explorable without it.)
+
 ## What's in this repo
 
 ```
