@@ -1,0 +1,22 @@
+{
+  "name": "meta-ads-agent-server",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Standalone backend that runs the Meta Ads AI agent 24/7: a daily performance check and a 3-day creative rotation job, talking directly to the Meta Marketing API.",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "run:daily-check": "node src/scripts/runDailyCheck.js",
+    "run:creative-rotation": "node src/scripts/runCreativeRotation.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "node-cron": "^3.0.3"
+  },
+  "engines": {
+    "node": ">=18.17"
+  }
+}
