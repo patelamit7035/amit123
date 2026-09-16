@@ -24,13 +24,14 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { useAgentStore } from "@/hooks/useAgentStore";
 
+// This dashboard now lives under /adpilot; the affiliate system owns the root.
 const NAV_ITEMS = [
-  { title: "Overview", url: "/", icon: LayoutDashboard },
-  { title: "Campaigns", url: "/campaigns", icon: Megaphone },
-  { title: "Creatives", url: "/creatives", icon: Sparkles },
-  { title: "Agent Activity", url: "/agent", icon: Activity },
-  { title: "Analytics", url: "/analytics", icon: BarChart3 },
-  { title: "Settings", url: "/settings", icon: Settings },
+  { title: "Overview", url: "/adpilot", icon: LayoutDashboard },
+  { title: "Campaigns", url: "/adpilot/campaigns", icon: Megaphone },
+  { title: "Creatives", url: "/adpilot/creatives", icon: Sparkles },
+  { title: "Agent Activity", url: "/adpilot/agent", icon: Activity },
+  { title: "Analytics", url: "/adpilot/analytics", icon: BarChart3 },
+  { title: "Settings", url: "/adpilot/settings", icon: Settings },
 ];
 
 export function AppSidebar() {
@@ -63,7 +64,7 @@ export function AppSidebar() {
                   <SidebarMenuButton asChild tooltip={item.title}>
                     <NavLink
                       to={item.url}
-                      end={item.url === "/"}
+                      end={item.url === "/adpilot"}
                       className={({ isActive }) =>
                         isActive ? "bg-sidebar-accent text-sidebar-accent-foreground font-medium" : ""
                       }
