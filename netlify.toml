@@ -1,0 +1,10 @@
+# One-click deploy config for Netlify's free tier.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# The app uses a hash router, so no SPA rewrite rules are needed - every route
+# is served by index.html already.

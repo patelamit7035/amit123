@@ -1,0 +1,7 @@
+# Local Supabase CLI configuration.
+project_id = "funnelos-affiliate"
+
+[functions.lead-capture]
+# The lead form is public: it is posted from landing pages by people who are
+# not signed in, so this function must not require a JWT.
+verify_jwt = false

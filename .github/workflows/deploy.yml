@@ -1,4 +1,4 @@
-name: Deploy dashboard to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -27,6 +27,12 @@ jobs:
       - run: npm run build
         env:
           VITE_BASE_PATH: /${{ github.event.repository.name }}/
+          # Optional. Leave these unset and the app deploys in demo mode, with
+          # all data living in the visitor's own browser. Set them (Settings →
+          # Secrets and variables → Actions) to run against a real Supabase
+          # project. The anon key is a public, client-side key by design.
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
